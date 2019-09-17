@@ -1,10 +1,18 @@
 {
   "name": "isomorphic-websocket",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
-  "main": "node.js",
-  "browser": "browser.js",
+  "main": "dist/node.js",
+  "browser": "dist/browser.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "prepublishOnly": "yarn build"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/register": "^7.6.0",
     "standard": "^14.3.0",
     "yarn-upgrade-all": "^0.5.2"
   },
